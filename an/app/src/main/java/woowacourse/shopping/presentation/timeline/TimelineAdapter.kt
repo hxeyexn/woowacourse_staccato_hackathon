@@ -10,43 +10,43 @@ class TimelineAdapter: RecyclerView.Adapter<TravelViewHolder>() {
         TravelItemUiModel(
             0,
             "제주도 가족 여행",
-            "",
+            "https://www.kkday.com/ko/blog/wp-content/uploads/korea_jeju_rainbow_coastal_road_4.jpg",
             "2024.05.06 - 09"
         ),
         TravelItemUiModel(
             1,
             "우테코 부산 여행",
-            "",
+            "https://www.kkday.com/ko/blog/wp-content/uploads/korea_jeju_rainbow_coastal_road_4.jpg",
             "2024.06.17 - 21"
         ),
         TravelItemUiModel(
             2,
             "서울 망원 한강 공원",
-            "",
+            "https://www.kkday.com/ko/blog/wp-content/uploads/korea_jeju_rainbow_coastal_road_4.jpg",
             "2024.06.15"
         ),
         TravelItemUiModel(
-            0,
+            3,
             "제주도 가족 여행",
-            "",
+            "https://www.kkday.com/ko/blog/wp-content/uploads/korea_jeju_rainbow_coastal_road_4.jpg",
             "2024.05.06 - 09"
         ),
         TravelItemUiModel(
-            2,
+            4,
             "서울 망원 한강 공원",
-            "",
+            "https://www.kkday.com/ko/blog/wp-content/uploads/korea_jeju_rainbow_coastal_road_4.jpg",
             "2024.06.15"
         ),
         TravelItemUiModel(
-            0,
+            5,
             "제주도 가족 여행",
-            "",
+            "https://www.kkday.com/ko/blog/wp-content/uploads/korea_jeju_rainbow_coastal_road_4.jpg",
             "2024.05.06 - 09"
         ),
         TravelItemUiModel(
-            2,
+            6,
             "서울 망원 한강 공원",
-            "",
+            "https://www.kkday.com/ko/blog/wp-content/uploads/korea_jeju_rainbow_coastal_road_4.jpg",
             "2024.06.15"
         ),
     )

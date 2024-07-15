@@ -65,7 +65,8 @@
                 android:id="@+id/iv_travel_image"
                 android:layout_width="172dp"
                 android:layout_height="100dp"
-                android:src="@drawable/exp_img" />
+                app:imageUrl="@{travelUi.travelThumbnail}"
+                tools:src="@drawable/exp_img" />
 
         </androidx.cardview.widget.CardView>
 
