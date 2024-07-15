@@ -40,7 +40,7 @@ public class Travel {
     @JoinTable(name = "travel_mate",
             joinColumns = @JoinColumn(name = "travel_id"),
             inverseJoinColumns = @JoinColumn(name = "member_id"))
-    private List<Member> member;
+    private List<Member> members;
 
     @Override
     public boolean equals(Object o) {
