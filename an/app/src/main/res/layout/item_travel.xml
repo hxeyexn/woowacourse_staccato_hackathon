@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="travelUi"
+            type="woowacourse.shopping.presentation.timeline.TravelItemUiModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_card_4dp"
+        android:layout_marginVertical="7.5dp"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/tv_travel_date_range"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="#FF3E3E3E"
+            android:textSize="10sp"
+            android:text="@{travelUi.travelDateRange}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="2024.03.21 - 25" />
+
+        <TextView
+            android:id="@+id/tv_travel_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:text="@{travelUi.travelTitle}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_travel_date_range"
+            tools:text="제주도 가족 여행" />
+
+        <View
+            android:id="@+id/divider_line"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="7dp"
+            android:background="#FFD2D2D2"
+            app:layout_constraintEnd_toStartOf="@id/iv_travel_thumbnail_card"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_travel_title" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/iv_travel_thumbnail_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_travel_image"
+                android:layout_width="172dp"
+                android:layout_height="100dp"
+                android:src="@drawable/exp_img" />
+
+        </androidx.cardview.widget.CardView>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
