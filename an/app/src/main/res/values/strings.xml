@@ -2,4 +2,7 @@
     <string name="app_name">Shopping</string>
     // all
     <string name="all_member_image_content_description">프로필 사진</string>
+
+    // item_visits
+    <string name="visits_image_content_description">방문 장소 사진</string>
 </resources>
