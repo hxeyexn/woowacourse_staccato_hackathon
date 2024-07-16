@@ -1,9 +1,6 @@
 package com.staccato.travel.domain;
 
-import java.time.LocalDate;
-import java.util.List;
-import java.util.Objects;
-
+import com.staccato.member.domain.Member;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -12,9 +9,9 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
-
-import com.staccato.member.domain.Member;
-
+import java.time.LocalDate;
+import java.util.List;
+import java.util.Objects;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -44,10 +41,12 @@ public class Travel {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
+        if (this == o) {
             return true;
-        if (o == null || getClass() != o.getClass())
+        }
+        if (o == null || getClass() != o.getClass()) {
             return false;
+        }
         Travel travel = (Travel) o;
         return Objects.equals(id, travel.id);
     }
@@ -57,4 +56,3 @@ public class Travel {
         return Objects.hashCode(id);
     }
 }
-
