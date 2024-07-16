@@ -1,3 +1,11 @@
+
+import java.util.Properties
+
+val localProperties = Properties().apply {
+    load(project.rootProject.file("local.properties").inputStream())
+}
+
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
@@ -8,6 +16,10 @@ android {
     namespace = "woowacourse.shopping"
     compileSdk = 34
 
+    buildFeatures {
+        buildConfig = true
+    }
+
     defaultConfig {
         applicationId = "woowacourse.shopping"
         minSdk = 26
@@ -17,6 +29,8 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         testInstrumentationRunnerArguments["runnerBuilder"] = "de.mannodermaus.junit5.AndroidJUnit5Builder"
+
+        buildConfigField("String", "BASE_URL", "\"${localProperties["base_url"]}\"")
     }
 
     buildTypes {
