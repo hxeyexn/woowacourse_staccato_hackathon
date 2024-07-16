@@ -14,7 +14,7 @@ class TimelineAdapter(private val eventHandler: TimelineEventHandler): RecyclerV
     }
 
     override fun onBindViewHolder(holder: TravelViewHolder, position: Int) {
-        holder.bind(travelItems[position])
+        holder.bind(travelItems[position], eventHandler)
     }
 
     override fun getItemCount(): Int = travelItems.size

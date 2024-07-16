@@ -1,6 +1,7 @@
 package woowacourse.shopping.presentation.timeline
 
 import android.os.Bundle
+import android.util.Log
 import androidx.lifecycle.ViewModelProvider
 import woowacourse.shopping.R
 import woowacourse.shopping.databinding.ActivityTimelineBinding
@@ -45,6 +46,7 @@ class TimelineActivity : BindingActivity<ActivityTimelineBinding>(), TimelineEve
     }
 
     override fun onTravelClicked(travelId: Long) {
+        Log.d("테스트", "clicked travel id : $travelId")
         // 화면 이동 로직 필요
         // val intent = Intent(this, classname).apply {
         //     putExtra(TRAVEL_ID_KEY, travelId)
