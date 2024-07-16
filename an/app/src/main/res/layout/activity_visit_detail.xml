@@ -15,11 +15,12 @@
             android:id="@+id/toolbar_visit_detail"
             android:layout_width="0dp"
             android:layout_height="60dp"
-            app:navigationIcon="@drawable/ic_arrow_back"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:menu="@menu/menu_visit_detail" />
+            app:menu="@menu/menu_visit_detail"
+            app:navigationIcon="@drawable/ic_arrow_back"
+            app:navigationIconTint="#888888" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_visit_detail"

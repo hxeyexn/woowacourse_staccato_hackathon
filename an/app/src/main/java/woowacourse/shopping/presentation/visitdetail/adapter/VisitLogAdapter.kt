@@ -5,11 +5,11 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import woowacourse.shopping.databinding.ItemVisitLogLeftBinding
 import woowacourse.shopping.databinding.ItemVisitLogRightBinding
-import woowacourse.shopping.presentation.visitdetail.model.VisitLog
+import woowacourse.shopping.presentation.visitdetail.model.Comment
 
-class VisitLogAdapter(private val items: MutableList<VisitLog>) :
+class VisitLogAdapter(private val items: MutableList<Comment>) :
     RecyclerView.Adapter<VisitLogViewHolder>() {
-    fun setItems(newItems: List<VisitLog>) {
+    fun setItems(newItems: List<Comment>) {
         items.clear()
         items.addAll(newItems.toList())
         notifyDataSetChanged()

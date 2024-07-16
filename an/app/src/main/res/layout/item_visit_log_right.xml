@@ -7,7 +7,7 @@
 
         <variable
             name="visitLog"
-            type="woowacourse.shopping.presentation.visitdetail.model.VisitLog" />
+            type="woowacourse.shopping.presentation.visitdetail.model.Comment" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -28,7 +28,7 @@
 
             <ImageView
                 android:id="@+id/iv_profile"
-                bindLoadCircleImage="@{visitLog.user.profileUrl}"
+                bindLoadCircleImage="@{visitLog.profileUrl}"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:src="@drawable/icon_bindtee" />
@@ -38,7 +38,7 @@
             android:id="@+id/tv_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{visitLog.user.name}"
+            android:text="@{visitLog.name}"
             app:layout_constraintEnd_toEndOf="@id/tv_chat"
             app:layout_constraintTop_toTopOf="@id/fl_profile"
             tools:text="username" />

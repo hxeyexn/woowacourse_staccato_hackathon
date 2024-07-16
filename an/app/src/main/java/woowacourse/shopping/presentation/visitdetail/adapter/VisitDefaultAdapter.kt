@@ -4,10 +4,11 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import woowacourse.shopping.databinding.ItemVisitDefaultBinding
+import woowacourse.shopping.presentation.visitdetail.model.VisitDefault
 
-class VisitDefaultAdapter(private val items: MutableList<String>) :
+class VisitDefaultAdapter(private val items: MutableList<VisitDefault>) :
     RecyclerView.Adapter<VisitDefaultHolder>() {
-    fun setItems(newItems: List<String>) {
+    fun setItems(newItems: List<VisitDefault>) {
         items.clear()
         items.addAll(newItems.toList())
         notifyDataSetChanged()
@@ -28,6 +29,6 @@ class VisitDefaultAdapter(private val items: MutableList<String>) :
         holder: VisitDefaultHolder,
         position: Int,
     ) {
-        holder.bind()
+        holder.bind(items[position])
     }
 }

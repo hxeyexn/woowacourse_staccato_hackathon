@@ -68,7 +68,7 @@ class VisitDetailActivity : BindingActivity<ActivityVisitDetailBinding>() {
 
     private fun observeData() {
         viewModel.visitDefault.observe(this) { visitDefault ->
-            defaultAdapter.setItems(visitDefault)
+            defaultAdapter.setItems(listOf(visitDefault))
         }
         viewModel.visitLogs.observe(this) { visitLogs ->
             visitLogAdapter.setItems(visitLogs)
