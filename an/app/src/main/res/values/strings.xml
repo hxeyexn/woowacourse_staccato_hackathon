@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">Shopping</string>
+
+    // all
+    <string name="all_delete">삭제</string>
+    <string name="all_member_image_content_description">프로필 사진</string>
+
+    // activity_travel_detail
+    <string name="travel_detail_mates">함께 간 사람들</string>
+    <string name="travel_detail_visits">방문 기록</string>
+    <string name="travel_detail_thumbnail_content_description">여행 상세 썸네일 사진</string>
+    <string name="travel_detail_add_visit">생성</string>
+    <string name="travel_detail_travel_period">%s ~ %s</string>
+
+    // item_visits
+    <string name="visits_image_content_description">방문 장소 사진</string>
 </resources>
