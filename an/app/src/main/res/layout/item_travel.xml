@@ -9,6 +9,8 @@
             name="travelUi"
             type="woowacourse.shopping.presentation.timeline.TravelItemUiModel" />
 
+
+
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
