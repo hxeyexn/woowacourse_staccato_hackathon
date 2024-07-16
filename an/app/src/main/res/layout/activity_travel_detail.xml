@@ -16,11 +16,11 @@
             android:id="@+id/toolbar_travel_detail"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            app:navigationIcon="@drawable/ic_arrow_back"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:menu="@menu/menu_detail" />
+            app:menu="@menu/menu_detail"
+            app:navigationIcon="@drawable/ic_arrow_back" />
 
         <ScrollView
             android:id="@+id/sv_travel_detail"
@@ -54,8 +54,8 @@
                     android:layout_marginTop="16dp"
                     android:ellipsize="end"
                     android:maxLines="1"
-                    android:textColor="@color/black"
                     android:textAppearance="@style/Bold20"
+                    android:textColor="@color/black"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/iv_travel_detail"
@@ -169,6 +169,7 @@
                     android:layout_marginBottom="16dp"
                     android:nestedScrollingEnabled="false"
                     android:scrollbars="none"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
