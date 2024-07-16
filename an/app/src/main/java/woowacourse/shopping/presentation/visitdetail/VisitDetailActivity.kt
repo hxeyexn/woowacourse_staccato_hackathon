@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.recyclerview.widget.ConcatAdapter
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import woowacourse.shopping.R
 import woowacourse.shopping.databinding.ActivityVisitDetailBinding
 import woowacourse.shopping.presentation.BindingActivity
@@ -35,7 +36,7 @@ class VisitDetailActivity : BindingActivity<ActivityVisitDetailBinding>() {
         binding.toolbarVisitDetail.setOnMenuItemClickListener {
             when (it.itemId) {
                 R.id.action_delete -> {
-                    Toast.makeText(this, "방문 로그 삭제할꾸양~", Toast.LENGTH_SHORT).show()
+                    materialBasicDialog()
                     true
                 }
 
@@ -44,6 +45,18 @@ class VisitDetailActivity : BindingActivity<ActivityVisitDetailBinding>() {
                 }
             }
         }
+    }
+
+    private fun materialBasicDialog() {
+        MaterialAlertDialogBuilder(this)
+            .setMessage("진짜로,, 방문 로그를,, 지우시려구요,,?")
+            .setNegativeButton("취소") { dialog, which ->
+                Toast.makeText(this, "삭제 안 돼!!! 평생 함께야!!!", Toast.LENGTH_SHORT).show()
+            }
+            .setPositiveButton("삭제") { dialog, which ->
+                Toast.makeText(this, "삭제 안 돼!!! 평생 함께야!!!", Toast.LENGTH_SHORT).show()
+            }
+            .show()
     }
 
     private fun initAdapter() {
