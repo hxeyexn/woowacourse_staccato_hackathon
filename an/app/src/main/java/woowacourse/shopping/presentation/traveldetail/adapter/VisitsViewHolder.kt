@@ -6,7 +6,7 @@ import woowacourse.shopping.presentation.traveldetail.model.VisitUiModel
 
 class VisitsViewHolder(
     private val binding: ItemVisitsBinding,
-): ViewHolder(binding.root) {
+) : ViewHolder(binding.root) {
     fun bind(visit: VisitUiModel) {
         binding.visit = visit
     }
