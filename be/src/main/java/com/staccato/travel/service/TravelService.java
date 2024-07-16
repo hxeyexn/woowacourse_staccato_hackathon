@@ -16,8 +16,8 @@ public class TravelService {
     private final TravelRepository travelRepository;
     private final VisitRepository visitRepository;
 
-    public TravelResponses findAll() {
-        List<Travel> travels = travelRepository.findAll();
+    public TravelResponses findByMemberId(Long memberId) {
+        List<Travel> travels = travelRepository.findByMembersId(memberId);
         return TravelResponses.from(travels);
     }
 

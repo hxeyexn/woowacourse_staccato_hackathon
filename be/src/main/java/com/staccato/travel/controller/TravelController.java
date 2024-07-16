@@ -19,7 +19,7 @@ public class TravelController {
     // 나중에 쿠키로 유저정보 주면, 유저 id에 맞는 여행들만 가져오도록 변경
     @GetMapping
     public ResponseEntity<TravelResponses> findTravels() {
-        return ResponseEntity.ok(travelService.findAll());
+        return ResponseEntity.ok(travelService.findByMemberId(1L));
     }
 
     @GetMapping("/{travelId}")
