@@ -12,14 +12,23 @@ class TravelDetailActivity : BindingActivity<ActivityTravelDetailBinding>() {
         get() = R.layout.activity_travel_detail
 
     private lateinit var matesAdapter: MatesAdapter
+    private lateinit var visitsAdapter: VisitsAdapter
 
     override fun initStartView(savedInstanceState: Bundle?) {
         initMatesAdapter()
+        initVisitsAdapter()
+        travelDetailViewModel.loadTravelDetail()
     }
 
     private fun initMatesAdapter() {
         matesAdapter = MatesAdapter()
         binding.rvTravelDetailMates.adapter = matesAdapter
         matesAdapter.updateMates(dummyMates)
+    }
+
+    private fun initVisitsAdapter() {
+        visitsAdapter = VisitsAdapter()
+        binding.rvTravelDetailVisits.adapter = visitsAdapter
+        visitsAdapter.updateVisits(dummyVisits)
     }
 }
