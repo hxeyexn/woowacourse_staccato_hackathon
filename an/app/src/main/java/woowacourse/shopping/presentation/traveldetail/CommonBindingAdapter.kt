@@ -23,7 +23,7 @@ object CommonBindingAdapter {
 
     @BindingAdapter("roundedCornerImage")
     @JvmStatic
-    fun loadImage(
+    fun loadRoundedCornerImage(
         imageView: ImageView,
         url: String?,
     ) {
@@ -31,6 +31,18 @@ object CommonBindingAdapter {
             .load(url)
             .placeholder(R.drawable.shape_all_card_4dp)
             .apply(RequestOptions.bitmapTransform(RoundedCorners(12)))
+            .into(imageView)
+    }
+
+    @BindingAdapter("image")
+    @JvmStatic
+    fun loadImage(
+        imageView: ImageView,
+        url: String?,
+    ) {
+        Glide.with(imageView.context)
+            .load(url)
+            .placeholder(R.drawable.shape_all_default_image)
             .into(imageView)
     }
 }
