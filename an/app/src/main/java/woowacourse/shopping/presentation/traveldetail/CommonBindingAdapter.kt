@@ -3,6 +3,8 @@ package woowacourse.shopping.presentation.traveldetail
 import android.widget.ImageView
 import androidx.databinding.BindingAdapter
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners
+import com.bumptech.glide.request.RequestOptions
 import woowacourse.shopping.R
 
 object CommonBindingAdapter {
@@ -16,6 +18,19 @@ object CommonBindingAdapter {
             .load(url)
             .placeholder(R.drawable.user_default_thumbnail)
             .circleCrop()
+            .into(imageView)
+    }
+
+    @BindingAdapter("roundedCornerImage")
+    @JvmStatic
+    fun loadImage(
+        imageView: ImageView,
+        url: String?,
+    ) {
+        Glide.with(imageView.context)
+            .load(url)
+            .placeholder(R.drawable.shape_all_card_4dp)
+            .apply(RequestOptions.bitmapTransform(RoundedCorners(12)))
             .into(imageView)
     }
 }
