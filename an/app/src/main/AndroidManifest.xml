@@ -13,10 +13,7 @@
         android:theme="@style/Theme.Shopping"
         tools:targetApi="31">
         <activity
-            android:name=".presentation.traveldetail.TravelDetailActivity"
-            android:exported="false" />
-        <activity
-            android:name=".presentation.timeline.TimelineActivity"
+            android:name=".presentation.visitdetail.VisitDetailActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,6 +21,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".presentation.traveldetail.TravelDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.timeline.TimelineActivity"
+            android:exported="true"></activity>
         <activity
             android:name=".presentation.addvisit.AddVisit"
             android:exported="false" />
