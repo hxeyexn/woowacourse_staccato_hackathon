@@ -1,52 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
+        <variable
+            name="visitLog"
+            type="woowacourse.shopping.presentation.visitdetail.model.VisitLog" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp">
 
         <ImageView
-            android:id="@+id/userImage"
+            android:id="@+id/iv_profile"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginStart="19dp"
             android:src="@drawable/icon_bindtee"
-            app:layout_constraintBottom_toBottomOf="@id/tv_user_text"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/userName"
+            android:id="@+id/tv_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:text="username"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@id/userImage"
-            app:layout_constraintStart_toStartOf="@id/userImage"
-            app:layout_constraintTop_toBottomOf="@id/userImage" />
-
+            android:text="@{visitLog.user.name}"
+            app:layout_constraintStart_toEndOf="@id/iv_profile"
+            app:layout_constraintTop_toTopOf="@id/iv_profile"
+            tools:text="username" />
 
         <TextView
-            android:id="@+id/tv_user_text"
-            android:layout_width="0dp"
+            android:id="@+id/tv_chat"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="14dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="19dp"
-            android:background="@drawable/word_balloon_right"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="25dp"
+            android:background="@drawable/word_balloon_left"
             android:padding="12dp"
-            android:text="카고 편식 그만~\n캬고오오오오~"
+            android:paddingHorizontal="18dp"
+            android:paddingVertical="10dp"
+            android:text="@{visitLog.chat}"
             android:textColor="#555555"
             android:textSize="15sp"
-            app:layout_constraintBottom_toBottomOf="@id/userImage"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/userImage"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toEndOf="@id/iv_profile"
+            app:layout_constraintTop_toBottomOf="@id/tv_name"
+            tools:text="캬고오오오오~" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

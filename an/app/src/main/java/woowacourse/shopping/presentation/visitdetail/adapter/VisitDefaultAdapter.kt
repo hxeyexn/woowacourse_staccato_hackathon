@@ -5,8 +5,14 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import woowacourse.shopping.databinding.ItemVisitDefaultBinding
 
-class VisitDefaultAdapter(private val items: List<String>) :
+class VisitDefaultAdapter(private val items: MutableList<String>) :
     RecyclerView.Adapter<VisitDefaultHolder>() {
+    fun setItems(newItems: List<String>) {
+        items.clear()
+        items.addAll(newItems.toList())
+        notifyDataSetChanged()
+    }
+
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int,

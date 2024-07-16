@@ -5,9 +5,16 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import woowacourse.shopping.databinding.ItemVisitLogLeftBinding
 import woowacourse.shopping.databinding.ItemVisitLogRightBinding
+import woowacourse.shopping.presentation.visitdetail.model.VisitLog
 
-class VisitLogAdapter(private val items: List<String>) :
+class VisitLogAdapter(private val items: MutableList<VisitLog>) :
     RecyclerView.Adapter<VisitLogViewHolder>() {
+    fun setItems(newItems: List<VisitLog>) {
+        items.clear()
+        items.addAll(newItems.toList())
+        notifyDataSetChanged()
+    }
+
     override fun getItemViewType(position: Int): Int {
         return when (position % 2) {
             0 -> 0
@@ -41,8 +48,8 @@ class VisitLogAdapter(private val items: List<String>) :
         position: Int,
     ) {
         when (holder) {
-            is VisitLogViewHolder.LeftVisitLogViewHolder -> holder.bind("오른쪽이미지 url")
-            is VisitLogViewHolder.RightVisitLogViewHolder -> holder.bind("오른쪽이미지 url")
+            is VisitLogViewHolder.LeftVisitLogViewHolder -> holder.bind(items[position])
+            is VisitLogViewHolder.RightVisitLogViewHolder -> holder.bind(items[position])
         }
     }
 }
